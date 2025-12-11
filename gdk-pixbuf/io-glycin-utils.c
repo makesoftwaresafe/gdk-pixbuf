@@ -293,7 +293,7 @@ gdk_pixbuf_glycin_animation_iter_advance (GdkPixbufAnimationIter *iter,
 
   new_time = timeval_to_usec (current_time);
 
-  while ((self->time + g_array_index (self->animation->decoded, GdkPixbufGlycinFrame, self->idx).delay) < new_time)
+  while ((self->time + g_array_index (self->animation->decoded, GdkPixbufGlycinFrame, self->idx).delay) <= new_time)
     {
       self->time += g_array_index (self->animation->decoded, GdkPixbufGlycinFrame, self->idx).delay;
 
