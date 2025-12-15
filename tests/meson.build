@@ -105,6 +105,7 @@ installed_tests = {
   'pixbuf-scale-two-step': { 'suites': ['ops'], },
   'pixbuf-short-gif-write': {
     'suites': ['format'],
+    'skip': enabled_loaders.contains('glycin'),
   },
   'pixbuf-gif-circular-table': {
     'suites': ['format'],
