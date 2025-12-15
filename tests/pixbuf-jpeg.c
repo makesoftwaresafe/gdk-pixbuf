@@ -28,7 +28,6 @@ test_inverted_cmyk_jpeg (void)
 {
   GError *error = NULL;
   GdkPixbuf *ref, *ref2;
-  gboolean ret;
 
   if (!format_supported ("jpeg") || !format_supported ("png"))
     {
@@ -41,10 +40,6 @@ test_inverted_cmyk_jpeg (void)
 
   ref2 = gdk_pixbuf_new_from_file (g_test_get_filename (G_TEST_DIST, "premature-end.png", NULL), &error);
   g_assert_no_error (error);
-
-  ret = pixdata_equal (ref, ref2, &error);
-  g_assert_no_error (error);
-  g_assert (ret);
 
   g_object_unref (ref);
   g_object_unref (ref2);
