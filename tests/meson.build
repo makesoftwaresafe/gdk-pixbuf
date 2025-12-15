@@ -133,8 +133,6 @@ test_data = [
   'premature-end.png',
   'premature-end.jpg',
   'bug143608-comment.jpg',
-  'bug725582-testrotate.jpg',
-  'bug725582-testrotate.png',
   'bug753605-atsize.jpg',
   'cve-2015-4491.bmp',
   'large.png',
